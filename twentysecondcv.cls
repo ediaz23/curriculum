@@ -21,6 +21,8 @@
 \RequirePackage[spanish]{babel}
 \RequirePackage[utf8]{inputenc}
 \usepackage{paralist}										% compact lists
+\usepackage{multicol}										% columns env.
+	\setlength{\multicolsep}{0pt}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
@@ -271,6 +273,7 @@
 	}\\
 }
 
+
 %----------------------------------------------------------------------------------------
 %	 MARGINS AND LINKS
 %----------------------------------------------------------------------------------------
@@ -284,3 +287,6 @@
     filecolor=magenta,      
     urlcolor=blue,
 }
+
+\newcommand{\SmallSep}{\vspace{\parsep}}
+
