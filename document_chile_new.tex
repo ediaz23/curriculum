@@ -29,13 +29,15 @@
 
 \profilepic{foto.jpg} % Profile picture
 
-\cvname{Esteban M Díaz T} % Your name
-\cvjobtitle{Computista} % Job title/career
+\cvname{Esteban Díaz} % Your name
+\cvjobtitle{Computista / Programador} % Job title/career
 
 \cvdate{23 de Octubre de 1992} % Date of birth
-\cvaddress{United Kingdom} % Short address/location, use \newline if more than 1 line is required
-\cvnumberphone{+39 9 9515 6801} % Phone number
-\cvsite{https://linkedin.com/in/ediaz23} % Personal website
+\cvaddress{Santiago, Comuna San Miguel, \newline 
+Alcalde Pedro Alarcón 844, \newline
+Departamento 603.} % Short address/location, use \newline if more than 1 line is required
+\cvnumberphone{+56 9 9515 6801} % Phone number
+\cvsite{https://linkedin.com/in/ediaz23}{linkedin} % Personal website
 \cvmail{esteban.diazt23@gmail.com} % Email address
 
 %----------------------------------------------------------------------------------------
@@ -46,19 +48,34 @@
 %	 ABOUT ME
 %----------------------------------------------------------------------------------------
 
-\aboutme{Alice is a sensible prepubescent girl from a wealthy English family who finds herself in a strange world ruled by imagination and fantasy. Alice feels comfortable with her identity and has a strong sense that her environment is comprised of clear, logical, and consistent rules and features. Alice's familiarity with the world has led one critic to describe her as a "disembodied intellect". Alice displays great curiosity and attempts to fit her diverse experiences into a clear understanding of the world.} % To have no About Me section, just remove all the text and leave \aboutme{}
+\aboutme{
+Licenciado en ciencias de la computación (programador) con 5 años de experiencia
+en la solución de problemas diversos mediante el uso de tecnología y herramientas
+informáticas, aplicando mis conocimientos para dar un mayor impulso a su empresa.
+Ávido por adquirir nuevos conocimientos y aprender nuevas tecnologías para
+aplicarlas en conjunto.
+} % To have no About Me section, just remove all the text and leave \aboutme{}
 
 %----------------------------------------------------------------------------------------
 %	 SKILLS
 %----------------------------------------------------------------------------------------
 
 % Skill bar section, each skill must have a value between 0 an 6 (float)
-\skills{{pursuer of rabbits/5.8},{good manners/4},{outgoing/4.3},{polite/4},{Java/0.01}}
+\skills{
+{ASP Classic/2},
+{PL SQL/4},
+{CSS/3.4},
+{HTML/5.3},
+{SQL/5.6},
+{javascript/5},
+{java/5.3},
+{odoo/4.2},
+{python/4.6}}
 
 %------------------------------------------------
 
 % Skill text section, each skill must have a value between 0 an 6
-\skillstext{{lovely/4},{narcissistic/3}}
+%\skillstext{{lovely/4},{narcissistic/3}}
 
 %----------------------------------------------------------------------------------------
 
@@ -68,73 +85,92 @@
 %	 INTERESTS
 %----------------------------------------------------------------------------------------
 
-\section{Interests}
+\section{Experiencia Laboral}
 
-The heroine and the dreamer of Wonderland; Alice is the principal character.
+\begin{twenty} % Environment for a list with descriptions
+	\twentyitem{2019-Hoy}{Programador odoo.}{Acruxlab S.P.A}
+	{
+		Desarrollo sobre el sistema odoo versión 8 y 11 que incluye:
+		\begin{compactitem}[\color{blue}$\circ$]
+			\item Adaptación a las necesidades específicas del cliente.
+			\item Desarrollo de nuevas herramientas para el usuario.
+			\item Integración con sistemas externos.
+			\item Adaptaciones y desarrollos sobre la sección POS (punto de venta).
+		\end{compactitem}
+	}
+	\twentyitem{2016-2018}{Analista Programador}{Ford Motor de Venezuela (en outsourcing)}
+	{
+		Migración de las plataformas informáticas de la empresa basada en herramientas
+		Oracle hacia tecnología web utilizando:
+		\begin{compactitem}[\color{blue}$\circ$]
+			\item Lenguaje de programación Java bajo el framework JSF.
+			\item Primefaces como framework para front-end.
+			\item Persistencia de datos con JPA/Eclipselink.
+			\item Almacenamiento de la información en base de datos Oracle.
+		\end{compactitem}
+	}
+	\twentyitem{2015-2016}{Analista Programador}{Corporación Inlaca (en outsourcing)}
+	{
+		Programación de soluciones de software para plataforma web utilizando los
+		siguientes lenguajes y herramientas:
+		\begin{compactitem}[\color{blue}$\circ$]
+			\item Classic ASP. 
+			\item PL/SQL.
+			\item Javascript, jquery, html y css.
+			\item Base de datos Oracle.
+		\end{compactitem}
+	}
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+
+
 
 %----------------------------------------------------------------------------------------
 %	 EDUCATION
 %----------------------------------------------------------------------------------------
 
-\section{Education}
+\section{Educación}
 
 \begin{twenty} % Environment for a list with descriptions
-	\twentyitem{since 1865}{Ph.D. {\normalfont candidate in Computer Science}}{Wonderland}{\emph{A Quantified Theory of Social Cohesion.}}
-	\twentyitem{1863-1865}{M.Sc. magna cum laude}{Wonderland}{Majoring in Computer Science}
-	\twentyitem{1861-1863}{B.Sc. magna cum laude}{Wonderland}{Majoring in Computer Science}
-	\twentyitem{1856-1861}{High school}{Wonderland}{Specializing in mathematics and physics.}
+	\twentyitem{2009-2016}{Licenciado en Ciencias de la computación}{Universidad de Carabobo}{Universitaria}
+	\twentyitem{2004-2009}{Bachiller en Ciencias}{U. E. Enrique Tejera}{Secundaria}
+	\twentyitem{1999-2004}{Certificado de primaria}{E. B. Dr. Carlos Arvelo}{Primaria}
 	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
 \end{twenty}
 
-%----------------------------------------------------------------------------------------
-%	 PUBLICATIONS
-%----------------------------------------------------------------------------------------
 
-\section{Publications}
+\section{Cursos Realizados}
 
-\begin{twentyshort} % Environment for a short list with no descriptions
-	\twentyitemshort{1865}{Chapter One, Down the Rabbit Hole.}
-	\twentyitemshort{1865}{Chapter Two, The Pool of Tears.}
-	\twentyitemshort{1865}{Chapter Three,  The Caucus Race and a Long Tale.}
-	\twentyitemshort{1865}{Chapter Four,  The Rabbit Sends a Little Bill.}
-	\twentyitemshort{1865}{Chapter Five,  Advice from a Caterpillar.}
-	%\twentyitemshort{<dates>}{<title/description>}
-\end{twentyshort}
-
-%----------------------------------------------------------------------------------------
-%	 AWARDS
-%----------------------------------------------------------------------------------------
-
-\section{Awards}
-
-\begin{twentyshort} % Environment for a short list with no descriptions
-	\twentyitemshort{1987}{All-Time Best Fantasy Novel.}
-	\twentyitemshort{1998}{All-Time Best Fantasy Novel before 1990.}
-	%\twentyitemshort{<dates>}{<title/description>}
-\end{twentyshort}
-
-%----------------------------------------------------------------------------------------
-%	 EXPERIENCE
-%----------------------------------------------------------------------------------------
-
-\section{Experience}
-
-\begin{twenty} % Environment for a list with descriptions
-	\twentyitem{1900}{Alice in Wonderland-The Circra (1900's) Silent Film.}{Film}{The first Alice on film was over a hundred years ago.}
-	\twentyitem{1933}{Alice in Wonderland 1933 version.}{Film}{This film stars Ethel griffies and Charlotte Henry. It was a box office flop when it was released.}
-	\twentyitem{1951}{Disney Film.}{Film}{Walt Disney brings Lewis Carroll's fantasy story to life in this well done animated classic. Even though many elements from the book were dropped, such as the duchess with the baby pig and mock turtle, this version is without a doubt the most famous Alice adaption made.}
-	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\begin{twenty}
+	\twentyitem{2008}{Idiomas Modernos, Ingles Básico}{FUNDAUC}{}
 \end{twenty}
 
-%----------------------------------------------------------------------------------------
-%	 OTHER INFORMATION
-%----------------------------------------------------------------------------------------
+\section{Formación académica}
 
-\section{Other information}
+\begin{twentyshort} % Environment for a short list with no descriptions
+	\twentyitemshortnormal{Electivas Cursadas}
+	{
+		Metaheuristicas en optimización combinatoria. \\ 
+		Teoría de juegos y ludificación para videojuegos. \\
+		Tópicos Especiales en Diseño de Algoritmos.
+	}
+	\twentyitemshortnormal{Trabajo Especial de Grado}
+	{\normalfont
+		Diseño y desarrollo de un módulo en CUDA que soporte Overlapping para las
+		operaciones básicas de matrices dispersas de la biblioteca UCS- parseLib.
+	}
+	%\twentyitemshort{<dates>}{<title/description>}
+\end{twentyshort}
 
-\subsection{Review}
+\section{Cualidades}
 
-Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
+\begin{compactitem}[\color{blue}$\circ$]
+	\item Responsable. 
+	\item Honesto
+	\item Proactivo.
+	\item Puntual.
+	\item Trabajo en equipo.
+\end{compactitem}
 
 %----------------------------------------------------------------------------------------
 %	 SECOND PAGE EXAMPLE

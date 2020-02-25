@@ -20,6 +20,7 @@
 \RequirePackage{parskip}
 \RequirePackage[spanish]{babel}
 \RequirePackage[utf8]{inputenc}
+\usepackage{paralist}										% compact lists
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
@@ -33,12 +34,13 @@
 \definecolor{sidecolor}{HTML}{E7E7E7}
 \definecolor{mainblue}{HTML}{0E5484}
 \definecolor{maingray}{HTML}{B9B9B9}
+\definecolor{RoyalBlue}{HTML}{176FC1}
 
 %----------------------------------------------------------------------------------------
 %	 MISC CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\renewcommand{\bfseries}{\color{gray}} % Make \textbf produce coloured text instead
+\renewcommand{\bfseries}{\color{RoyalBlue}} % Make \textbf produce coloured text instead
 
 \pagestyle{empty} % Disable headers and footers
 
@@ -72,7 +74,7 @@
 \newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
 \newcommand{\cvnumberphone}[1]{\renewcommand{\cvnumberphone}{#1}}
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
-\newcommand{\cvsite}[1]{\renewcommand{\cvsite}{#1}}
+\newcommand{\cvsite}[2]{\renewcommand{\cvsite}{\href{#1}{#2}}}
 \newcommand{\aboutme}[1]{\renewcommand{\aboutme}{#1}}
 \newcommand{\profilepic}[1]{\renewcommand{\profilepic}{#1}}
 \newcommand{\cvname}[1]{\renewcommand{\cvname}{#1}}
@@ -145,13 +147,13 @@
 			\ifthenelse{\equal{\cvaddress}{}}{}{\textsc{\Large\icon{\Letter}} & \cvaddress\\}
 			\ifthenelse{\equal{\cvnumberphone}{}}{}{\textsc{\Large\icon{\Telefon}} & \cvnumberphone\\}
 			\ifthenelse{\equal{\cvsite}{}}{}{\textsc{\Large\icon{\Mundus}} & \cvsite\\}
-			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\large\icon{@}} & \href{mailto:\cvmail}{\cvmail}}
+			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\large\icon{@}} & \cvmail}
 		\end{tabular}
 
 		%------------------------------------------------
 		
 		\ifthenelse{\equal{\aboutme}{}}{}{
-			\profilesection{About me}
+			\profilesection{Descripción}
 			\begin{flushleft}
 				\aboutme
 			\end{flushleft}
@@ -159,12 +161,11 @@
 
 		%------------------------------------------------
 
-		\profilesection{Skills}
+		\profilesection{Habilidades}
 
 		\skills
 		\skillstext
 		\scriptsize
-		(*)[The skill scale is from 0 (Fundamental Awareness) to 6 (Expert).]
 			
 		%------------------------------------------------
 			
@@ -201,10 +202,18 @@
 	\stepcounter{colorCounter}%
 }
 
+\newcommand{\sectioncolorYo}[1]{%
+	{%
+		\round{#1}{
+			mainblue%
+		}%
+	}%
+}
+
 \renewcommand{\section}[1]{
 	{%
 		\color{gray}%
-		\Large\sectioncolor{#1}%
+		\Large\sectioncolorYo{#1}%
 	}
 }
 
@@ -256,6 +265,12 @@
 	}\\
 }
 
+\newcommand{\twentyitemshortnormal}[2]{%
+	#1&\hspace{\parsep}\parbox[t]{0.7\textwidth}{%
+		#2\vspace{\parsep}%
+	}\\
+}
+
 %----------------------------------------------------------------------------------------
 %	 MARGINS AND LINKS
 %----------------------------------------------------------------------------------------
@@ -263,3 +278,9 @@
 \RequirePackage[left=7.6cm,top=0.1cm,right=1cm,bottom=0.2cm,nohead,nofoot]{geometry}
 
 \RequirePackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
